@@ -9,8 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Afacad' rel='stylesheet'>
 
     <style>
-      /* header Styles */
-      * {
+             * {
     margin: 0;
     box-sizing: border-box;
   }
@@ -108,244 +107,6 @@
   color: white;
 }
 
-.form-popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 10;
-  width: 100%;
-  opacity: 0;
-  pointer-events: none;
-  max-width: 720px;
-  /* background: rgb(226, 233, 230); */
-  /* border: 2px solid #275360; */
-  background: black;
-  border: 0.5px solid white;
-  border-radius: 5px;
-  box-shadow: 0 0 25px #0f5256;
-  transform: translate(-50%, -70%);
-  margin-top: 50px;
-}
-
-.show-popup .form-popup {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translate(-50%, -50%);
-  transition: transform 0.3s ease, opacity 0.1s;
-}
-
-.form-popup .close-btn {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  color: white;
-  cursor: pointer;
-}
-
-.blur-bg-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  pointer-events: none;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  transition: 0.1s ease;
-}
-
-.show-popup .blur-bg-overlay {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.form-popup .form-box {
-  display: flex;
-}
-
-.form-box .form-details {
-  width: 100%;
-  color: #fff;
-  max-width: 330px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-top-left-radius: 5px; 
-  border-bottom-left-radius: 5px;
-  border-right: none;
-
-}
-
-.login .form-details{
-
-background: linear-gradient(-45deg,black,#0f5256,#87dce7);
-
-}
-
-.signup .form-details{
-background: linear-gradient(-45deg,black,#0f5256,#87dce7);
-}
-
-.form-box .form-content {
-  width: 100%;
-  padding: 0 35px 35px 35px;
-}
-
-.form-box h2 {
-  text-align: center;
-  margin-bottom: 29px;
- 
-}
-.form-box h3 {
-  text-align: center;
-  margin-bottom: 29px;
-  color: #fff;
-  font-size: 25px;
-}
-
-form .input-field {
-  position: relative;
-  height: 50px;
-  width: 100%;
-  margin-top: 20px;
-}
-
-.input-field input {
-  height: 100%;
-  width: 100%;
-  background: none;
-  outline: none;
-  font-size: 0.95rem;
-  padding: 0 15px;
-  border: 1px solid #fff;
-  border-radius: 3px;
-  color: white;
-}
-
-.input-field input:focus {
-  border: 1px solid  white;
-  
-}
-
-.input-field label {
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  transform: translateY(-50%);
-  color: white;
-  pointer-events: none;
-  transition: 0.2s ease;
-  
-}
-
-.input-field input:is(:focus, :valid) {
-  padding: 16px 15px 0;
-}
-
-.input-field input:is(:focus, :valid)~label {
-  transform: translateY(-120%);
-  color: white;
-  font-size: 0.75rem;
-}
-.line{
-    position: relative;
-    height: 1px;
-    width: 100%;
-   background-color: #d4d4d4;
-   margin: 36px 0;
-}
-.line::before{
-    content: 'or';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: black;
-    color: #fff;
-    padding: 0 20px;
-}
-.media-options a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #fff;
-    padding: 5px;
-}
- .media-options .google-img{
-    
-   height: 30px;
-   width: 30px;
-  
-   object-fit: cover; 
-}
-a.google{
-    border: 1px solid #221616;
-}
-.form-box a {
-  color: #248388;
-  text-decoration: none;
-}
-
-.form-box a:hover {
-  text-decoration: underline;
-}
-
-form :where(.forgot-pass-link, .policy-text) {
-  display: inline-flex;
-  margin-top: 13px;
-  font-size: 0.95rem;
-}
-
-form button {
-  width: 100%;
-  color: #fff;
-  border: none;
-  outline: none;
-  padding: 14px 0;
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 3px;
-  cursor: pointer;
-  margin: 25px 0;
-  background:  #0f5256;
-  transition: 0.2s ease;
-}
-
-form button:hover {
-  background: #09343c;
-}
-
-.form-content .bottom-link {
-  text-align: center;
-  color: white;
-}
-
-.form-popup .signup,
-.form-popup.show-signup .login {
-  display: none;
-}
-
-.form-popup.show-signup .signup {
-  display: flex;
-}
-
-.signup .policy-text {
-  display: flex;
-  margin-top: 14px;
-  align-items: center;
-  color: white;
-}
-
-.signup .policy-text input {
-  width: 14px;
-  height: 14px;
-  margin-right: 7px;
-  color: #0f5256;
-}
 
 @media (max-width: 950px) {
   .navbar :is(.hamburger-btn, .close-btn) {
@@ -404,19 +165,8 @@ form button:hover {
   }
 }
 
-@media (max-width: 760px) {
-  .form-popup {
-      width: 95%;
-  }
 
-  .form-box .form-details {
-      display: none;
-  }
 
-  .form-box .form-content {
-      padding: 30px 20px;
-  }
-}
   
   /* css for contact */
   .contact {
@@ -697,84 +447,11 @@ footer::before {
                 <li><a href="blogs.html">blog</a></li>
                 <li><a href="contact.html"  class="active">contact</a></li>
             </ul>
-            <button class="login-btn">LOG IN</button>
+            <a href="login.html"><button class="login-btn">LOG IN</button></a>
         </nav>
     </header>
   
-    <div class="blur-bg-overlay"></div>
-    <div class="form-popup">
-        <span class="close-btn material-symbols-rounded">close</span>
-        <div class="form-box login">
-            <div class="form-details">
-                <h2>Welcome Back</h2>
-                <p>Please log in with your credentials to stay connected with our latest updates and offerings.</p>
-            </div>
-            <div class="form-content">
-                <h3>LOGIN</h3>
-                <form action="#">
-                    <div class="input-field">
-                        <input type="text" required>
-                        <label>Email</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" required>
-                        <label>Password</label>
-                    </div>
-                    <a href="#" class="forgot-pass-link">Forgot password?</a>
-                    <button type="submit">Log In</button>
-                </form>
-                <div class="bottom-link">
-                    Don't have an account?
-                    <a href="#" id="signup-link">Signup</a>
-                </div>
-                <div class="line"></div>
-                <div class="media-options">
-                    <a href="#" class="field-google">
-                        <img src="assest/Google_Icons-09-512.png" alt="" class="google-img">
-                        <span>Login with Google</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="form-box signup">
-            <div class="form-details">
-                <h2>Create Account</h2>
-                <p>To join our community, please register using your personal details.</p>
-            </div>
-            <div class="form-content">
-                <h3>SIGNUP</h3>
-                <form action="#">
-                    <div class="input-field">
-                        <input type="text" required>
-                        <label>Enter your email</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" required>
-                        <label>Create password</label>
-                    </div>
-                    <div class="policy-text">
-                        <input type="checkbox" id="policy">
-                        <label for="policy">
-                            I agree the
-                            <a href="#" class="option">Terms & Conditions</a>
-                        </label>
-                    </div>
-                    <button type="submit">Sign Up</button>
-                </form>
-                <div class="bottom-link">
-                    Already have an account? 
-                    <a href="#" id="login-link">Login</a>
-                </div>
-                <div class="line"></div>
-                <div class="media-options">
-                    <a href="#" class="field-google">
-                        <img src="assest/Google_Icons-09-512.png" alt="" class="google-img">
-                        <span>Login with Google</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
      <section class="contact">
         <div class="contact-container">
@@ -850,14 +527,11 @@ footer::before {
 
 
      <script>
-          // js for navbar
+           // js for navbar
 const navbarMenu = document.querySelector(".navbar .links");
 const hamburgerBtn = document.querySelector(".hamburger-btn");
 const hideMenuBtn = navbarMenu.querySelector(".close-btn");
 const showPopupBtn = document.querySelector(".login-btn");
-const formPopup = document.querySelector(".form-popup");
-const hidePopupBtn = formPopup.querySelector(".close-btn");
-const signupLoginLink = formPopup.querySelectorAll(".bottom-link a");
 
 // Show mobile menu
 hamburgerBtn.addEventListener("click", () => {
@@ -867,21 +541,6 @@ hamburgerBtn.addEventListener("click", () => {
 // Hide mobile menu
 hideMenuBtn.addEventListener("click", () =>  hamburgerBtn.click());
 
-// Show login popup
-showPopupBtn.addEventListener("click", () => {
-    document.body.classList.toggle("show-popup");
-});
-
-// Hide login popup
-hidePopupBtn.addEventListener("click", () => showPopupBtn.click());
-
-// Show or hide signup form
-signupLoginLink.forEach(link => {
-    link.addEventListener("click", (e) => {
-        e.preventDefault();
-        formPopup.classList[link.id === 'signup-link' ? 'add' : 'remove']("show-signup");
-    });
-});
 
  // js for footer section
 document.addEventListener("DOMContentLoaded", function() {

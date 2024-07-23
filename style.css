@@ -1,5 +1,5 @@
  /* header Styles */
- /* header Styles */
+
  * {
   margin: 0;
   box-sizing: border-box;
@@ -98,244 +98,6 @@ background: black;
 color: white;
 }
 
-.form-popup {
-position: fixed;
-top: 50%;
-left: 50%;
-z-index: 10;
-width: 100%;
-opacity: 0;
-pointer-events: none;
-max-width: 720px;
-/* background: rgb(226, 233, 230); */
-/* border: 2px solid #275360; */
-background: black;
-border: 0.5px solid white;
-border-radius: 5px;
-box-shadow: 0 0 25px #0f5256;
-transform: translate(-50%, -70%);
-margin-top: 50px;
-}
-
-.show-popup .form-popup {
-opacity: 1;
-pointer-events: auto;
-transform: translate(-50%, -50%);
-transition: transform 0.3s ease, opacity 0.1s;
-}
-
-.form-popup .close-btn {
-position: absolute;
-top: 12px;
-right: 12px;
-color: white;
-cursor: pointer;
-}
-
-.blur-bg-overlay {
-position: fixed;
-top: 0;
-left: 0;
-z-index: 10;
-height: 100%;
-width: 100%;
-opacity: 0;
-pointer-events: none;
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-transition: 0.1s ease;
-}
-
-.show-popup .blur-bg-overlay {
-opacity: 1;
-pointer-events: auto;
-}
-
-.form-popup .form-box {
-display: flex;
-}
-
-.form-box .form-details {
-width: 100%;
-color: #fff;
-max-width: 330px;
-text-align: center;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-border-top-left-radius: 5px; 
-border-bottom-left-radius: 5px;
-border-right: none;
-
-}
-
-.login .form-details{
-
-background: linear-gradient(-45deg,black,#0f5256,#87dce7);
-
-}
-
-.signup .form-details{
-background: linear-gradient(-45deg,black,#0f5256,#87dce7);
-}
-
-.form-box .form-content {
-width: 100%;
-padding: 0 35px 35px 35px;
-}
-
-.form-box h2 {
-text-align: center;
-margin-bottom: 29px;
-
-}
-.form-box h3 {
-text-align: center;
-margin-bottom: 29px;
-color: #fff;
-font-size: 25px;
-}
-
-form .input-field {
-position: relative;
-height: 50px;
-width: 100%;
-margin-top: 20px;
-}
-
-.input-field input {
-height: 100%;
-width: 100%;
-background: none;
-outline: none;
-font-size: 0.95rem;
-padding: 0 15px;
-border: 1px solid #fff;
-border-radius: 3px;
-color: white;
-}
-
-.input-field input:focus {
-border: 1px solid  white;
-
-}
-
-.input-field label {
-position: absolute;
-top: 50%;
-left: 15px;
-transform: translateY(-50%);
-color: white;
-pointer-events: none;
-transition: 0.2s ease;
-
-}
-
-.input-field input:is(:focus, :valid) {
-padding: 16px 15px 0;
-}
-
-.input-field input:is(:focus, :valid)~label {
-transform: translateY(-120%);
-color: white;
-font-size: 0.75rem;
-}
-.line{
-  position: relative;
-  height: 1px;
-  width: 100%;
- background-color: #d4d4d4;
- margin: 36px 0;
-}
-.line::before{
-  content: 'or';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  background-color: black;
-  color: #fff;
-  padding: 0 20px;
-}
-.media-options a{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #fff;
-  padding: 5px;
-}
-.media-options .google-img{
-  
- height: 30px;
- width: 30px;
-
- object-fit: cover; 
-}
-a.google{
-  border: 1px solid #221616;
-}
-.form-box a {
-color: #248388;
-text-decoration: none;
-}
-
-.form-box a:hover {
-text-decoration: underline;
-}
-
-form :where(.forgot-pass-link, .policy-text) {
-display: inline-flex;
-margin-top: 13px;
-font-size: 0.95rem;
-}
-
-form button {
-width: 100%;
-color: #fff;
-border: none;
-outline: none;
-padding: 14px 0;
-font-size: 1rem;
-font-weight: 500;
-border-radius: 3px;
-cursor: pointer;
-margin: 25px 0;
-background:  #0f5256;
-transition: 0.2s ease;
-}
-
-form button:hover {
-background: #09343c;
-}
-
-.form-content .bottom-link {
-text-align: center;
-color: white;
-}
-
-.form-popup .signup,
-.form-popup.show-signup .login {
-display: none;
-}
-
-.form-popup.show-signup .signup {
-display: flex;
-}
-
-.signup .policy-text {
-display: flex;
-margin-top: 14px;
-align-items: center;
-color: white;
-}
-
-.signup .policy-text input {
-width: 14px;
-height: 14px;
-margin-right: 7px;
-color: #0f5256;
-}
 
 @media (max-width: 950px) {
 .navbar :is(.hamburger-btn, .close-btn) {
@@ -394,19 +156,8 @@ color: #0f5256;
 }
 }
 
-@media (max-width: 760px) {
-.form-popup {
-    width: 95%;
-}
 
-.form-box .form-details {
-    display: none;
-}
 
-.form-box .form-content {
-    padding: 30px 20px;
-}
-}
   /* start css for hero section */
   .hero {
     height: 95vh;
@@ -497,7 +248,7 @@ color: #0f5256;
       margin-top: 20px;
     }
     .hero .hero-text span{
-      font-size: 50px;
+      font-size: 40px;
       color:  #0f5256;
       font-weight: bold;
     }
@@ -858,7 +609,7 @@ color: #0f5256;
 /* Responsive Design */
 @media (max-width: 768px) {
   .review{
-    margin-top: 1500px;
+    margin-top: 1700px;
   }
   .review-card {
     width: 90%;
@@ -874,7 +625,6 @@ color: #0f5256;
 } 
 .grow .wrapper{
     padding:0px 60px;
-    margin:60px auto;
     
 }
 .grow .content{
@@ -886,7 +636,7 @@ color: #0f5256;
 .grow .content h3{ 
     font-size: 40px;
     color:#222; 
-    Letter-spacing: 1px;
+    Letter-spacing: 1;
 }
 .grow .content p{ 
     
@@ -927,6 +677,15 @@ color: #0f5256;
         /* padding-top: 20px; */
       
      }
+     .grow .wrapper{
+      padding:0px 45px;
+      
+  }
+  .grow .content h3{ 
+    font-size: 30px;
+    color:#222; 
+    Letter-spacing: 0.5;
+}
      .grow .details h1{
         font-size: 32px; 
        
@@ -942,7 +701,7 @@ color: #0f5256;
         
     }
     .grow .content .button a{ 
-        padding:15px 20px;
+        padding:5px 10px;
     }
     .grow .image{
         float: none;
