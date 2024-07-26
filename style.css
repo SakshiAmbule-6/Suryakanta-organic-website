@@ -285,7 +285,14 @@ color: white;
     
     color: #48d84a;
   }
- 
+  @media (max-width: 768px){
+    .about {
+      padding: 30px 0;
+    }
+    .about h2{
+      font-size: 25px;
+    }
+  }
   
   /* style css for hydroponic */
   .hydroponic {
@@ -431,6 +438,7 @@ color: white;
   @media (max-width: 767px){
     .team h2{
         font-size: 25px;
+        padding: 0 5px 0 5px;
         
     }
   }
@@ -609,11 +617,14 @@ color: white;
 /* Responsive Design */
 @media (max-width: 768px) {
   .review{
-    margin-top: 1700px;
+    margin-top: 1850px;
   }
   .review-card {
     width: 90%;
   }
+.review-container {
+padding: 0px;
+}
 }
   
   /* style for grow section */
@@ -693,6 +704,7 @@ color: white;
     .grow .content{
         width: 100%; 
         float: none;
+        padding: 0px;
     }
     .grow .content .button{ 
         margin-top: 30px; 
@@ -707,6 +719,7 @@ color: white;
         float: none;
         width: 100%;
         margin-top: 25px;
+        padding: 0px;
     }
 }
 
@@ -728,7 +741,7 @@ footer {
   color: #fff;
   padding: 40px 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  margin-top: 600px;
+  margin-top: 500px;
 }
 
 footer::before {
@@ -870,7 +883,7 @@ footer::before {
 /* Responsive Design */
 @media (max-width: 768px) {
   footer{
-    margin-top: 100px;
+    margin-top: 15px;
   }
   .footer-content {
       flex-direction: column;
@@ -886,7 +899,7 @@ footer::before {
 
 @media (max-width: 480px) {
   footer{
-    margin-top: 100px;
+    margin-top: 15px;
   }
   .logo-text {
       font-size: 24px;
