@@ -327,7 +327,7 @@ color: white;
   }
   
   /* media queries  */
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .hydroponic {
       flex-direction: column;
       text-align: center;
@@ -448,9 +448,11 @@ color: white;
   /* mission styles */
   .mission .title{
     text-align: center;
-    font-size: 30px;
-    margin-top: 30px;
    
+   
+}
+.mission .title h2{
+  font-size: 40px;
 }
 .mission .title p{
     font-size: 20px;
@@ -617,7 +619,7 @@ color: white;
 /* Responsive Design */
 @media (max-width: 768px) {
   .review{
-    margin-top: 1850px;
+    margin-top: 2000px;
   }
   .review-card {
     width: 90%;

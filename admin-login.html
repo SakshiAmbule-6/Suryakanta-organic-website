@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login - Suryakanta Organics Hydroponics</title>
+    <link href='https://fonts.googleapis.com/css?family=Afacad' rel='stylesheet'>
     <style>
         * {
             margin: 0;
@@ -16,8 +17,8 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: url('/assest/login-background.png') no-repeat center center/cover;
-            font-family: 'Arial', sans-serif;
+            background: url('/assest/login-back2.jpg') no-repeat center center/cover;
+            font-family: 'Afacad';
         }
 
         .container {
@@ -32,7 +33,7 @@
         .login-box {
             background: rgba(255, 255, 255, 0.85);
             padding: 40px;
-            box-shadow: 0 10px 20px rgba(248, 246, 246, 0.3);
+            box-shadow: 0 10px 20px rgba(251, 253, 253, 0.3);
             border-radius: 10px;
             width: 100%;
             max-width: 400px;
@@ -53,7 +54,7 @@
 
         .login-box h2 {
             margin-bottom: 20px;
-            color: #333;
+            color: #0f5256;
             font-weight: bold;
             text-transform: uppercase;
         }
@@ -70,13 +71,13 @@
             border: none;
             border-bottom: 1px solid #333;
             outline: none;
-            color: #333;
+            color: #0f5256;
             font-size: 16px;
             transition: all 0.3s ease;
         }
 
         .user-box input:focus {
-            border-bottom: 1px solid #0d6efd;
+            border-bottom: 1px solid #0f5256;
         }
 
         .user-box label {
@@ -85,7 +86,7 @@
             left: 0;
             padding: 10px 0;
             font-size: 16px;
-            color: #333;
+            color: #0f5256;
             pointer-events: none;
             transition: all 0.5s ease;
         }
@@ -94,12 +95,12 @@
         .user-box input:valid ~ label {
             top: -20px;
             left: 0;
-            color: #0d6efd;
+            color: #0f5256;
             font-size: 12px;
         }
 
         button {
-            background: linear-gradient(135deg, #0d6efd, #0056b3);
+            background: linear-gradient(135deg, #0f5256, #09343c);
             border: none;
             padding: 10px 20px;
             border-radius: 5px;
@@ -110,7 +111,7 @@
         }
 
         button:hover {
-            background: linear-gradient(135deg, #0056b3, #0d6efd);
+            background: linear-gradient(135deg, #09343c, #0f5256);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
@@ -119,20 +120,21 @@
         }
 
         .forgot-password a {
-            color: #0d6efd;
+            color: #09343c;
             text-decoration: none;
             font-size: 14px;
             transition: color 0.3s ease;
         }
 
         .forgot-password a:hover {
-            color: #0056b3;
+            color: #0f5256;
             text-decoration: underline;
         }
 
         @media (max-width: 480px) {
             .login-box {
                 padding: 20px;
+                width: 90%;
             }
 
             .login-box h2 {
