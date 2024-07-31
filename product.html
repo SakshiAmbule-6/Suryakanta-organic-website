@@ -1,657 +1,597 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-    <link href='https://fonts.googleapis.com/css?family=Afacad' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
-  <style>
-   * {
-  margin: 0;
-  box-sizing: border-box;
-}
-body {
-  position: relative; 
-  font-family: 'Afacad';
-  background-color:  #ecf7f0;
-  line-height: 1.6;
+    <link href='https://fonts.googleapis.com/css?family=Afacad' rel='stylesheet'>
+    <style>
+       * {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    position: relative; 
+    font-family: 'Afacad';
+    background-color:  #ecf7f0;
+    line-height: 1.6;
 
-}
-header {
-position: fixed;
-top: 0;
-left : 0;
-width: 100%;
-z-index: 1000;
-background-color: #0f5256;
-line-height: 1.5;
+  }
+  header {
+  position: fixed;
+  top: 0;
+  left : 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #0f5256;
+  line-height: 1.5;
 }
 
 .navbar {
-display: flex;
-padding: 10px 0;
-align-items: center;
-max-width: 1200px;
-margin: 0 auto;
-justify-content: space-between;
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 
 .navbar .hamburger-btn {
-display: none;
-color: #fff;
-cursor: pointer;
-font-size: 1.5rem;
+  display: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 
 .navbar .logo {
-gap: 10px;
-display: flex;
-align-items: center;
+  gap: 10px;
+  display: flex;
+  align-items: center;
 
 }
 
 .navbar .logo img {
-width: 190px;
+  width: 190px;
 
 }
 
 
 .navbar .links {
-display: flex;
-gap: 35px;
-list-style: none;
-align-items: center;
-
-
+  display: flex;
+  gap: 35px;
+  list-style: none;
+  align-items: center;
+  
+  
 }
 
 .navbar .close-btn {
-position: absolute;
-right: 20px;
-top: 20px;
-display: none;
-color: #000;
-cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: none;
+  color: #000;
+  cursor: pointer;
 }
 
 .navbar .links a {
-color: #fff;
-font-size: 20px;
-text-decoration: none;
-transition: 0.1s ease;
-text-transform: capitalize;
-
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.1s ease;
+  text-transform: capitalize;
+ 
 }
-.navbar .links a.activee,
+.navbar .links a.active,
 .navbar .links a:hover {
-color: #69ba6b;
+  color: #69ba6b;
 }
 
 .navbar .login-btn {
-border: none;
-outline: none;
-background: white;
-color: #275360;
-font-size: 15px;
-padding: 5px 10px;
-border-radius: 3px;
-cursor: pointer;
-transition: 0.15s ease;
+  border: none;
+  outline: none;
+  background: white;
+  color: #275360;
+  font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.15s ease;
 }
 
 .navbar .login-btn:hover {
-background: black;
-color: white;
+  background: black;
+  color: white;
 }
 
 
 @media (max-width: 950px) {
-.navbar :is(.hamburger-btn, .close-btn) {
-    display: block;
-    font-size: 30px;
-    color: white;
-    margin-left: 20px;
+  .navbar :is(.hamburger-btn, .close-btn) {
+      display: block;
+      font-size: 30px;
+      color: white;
+      margin-left: 20px;
+  }
+
+  .navbar {
+      padding: 15px 0;
+  }
+
+  .navbar .logo img {
+      display: flex;
+  }
+
+  .navbar .logo h2 {
+      font-size: 1.4rem;
+  }
+
+  .navbar .links {
+      position: fixed;
+      top: 0;
+      z-index: 10;
+      left: -100%;
+      display: block;
+      height: 100vh;
+      width: 100%;
+      padding-top: 60px;
+      text-align: center;
+      background: #0f5256;
+      color: white;
+      transition: 0.2s ease;
+  }
+
+  .navbar .links.show-menu {
+      left: 0;
+  }
+
+  .navbar .links a {
+      display: inline-flex;
+      margin: 20px 0;
+      font-size: 1.2rem;
+      color: white;
+  }
+
+  .navbar .links a:hover {
+      color: #09343c;
+  }
+
+  .navbar .login-btn {
+      font-size: 0.9rem;
+      padding: 7px 10px;
+      margin-right: 10px;
+  }
 }
 
-.navbar {
-    padding: 15px 0;
-}
-
-.navbar .logo img {
+/* css for products */
+.button-container {
     display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 130px;
+    border: none;
+    border-bottom: 3px solid #ecf7f0;
+    box-shadow: 2px 2px 2px rgba(90, 89, 89, 0.4);
+    padding-bottom: 30px;
+   
 }
 
-.navbar .logo h2 {
-    font-size: 1.4rem;
+.button-container button {
+    padding: 10px 20px;
+    font-size: 15px;
+    /* background: linear-gradient(135deg, #0f5256, #09343c); */
+    /* color: #fff; */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+   
 }
 
-.navbar .links {
-    position: fixed;
-    top: 0;
-    z-index: 10;
-    left: -100%;
-    display: block;
-    height: 100vh;
+.button-container button:hover {
+    background: linear-gradient(135deg, #09343c, #0f5256);
+    color: #fff;
+}
+        main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .product-box {
+            background-color: #fff;
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+            padding: 10px; 
+            margin: 10px; 
+            width: 280px; 
+            text-align: left; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        }
+
+       .product-box img {
+           width: 100%; 
+           height: auto; 
+        }
+
+       .product-box h2 {
+           font-size: 24px;
+           margin: 10px 0;
+           color: #333;
+        }
+
+        .product-box p {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #888;
+        }
+        .product-box button {
+            padding: 0.5rem 1rem;
+            background-color:  #0f5256;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .product-box button:hover {
+            background-color: #09343c;
+        }
+
+       /* Shopping Cart Styles */
+.cart {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1.5rem;
     width: 100%;
-    padding-top: 60px;
+    max-width: 700px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    
+}
+
+.cart h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #0f5256;
+    border-bottom: 2px solid #0f5256;
+    padding-bottom: 0.5rem;
+}
+
+.cart .cart-items {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item p {
+    margin: 0;
+    color: #555;
+}
+
+.cart-item .quantity {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cart-item .quantity button {
+    padding: 0.4rem 0.8rem;
+    background-color: #0f5256;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item .quantity button:hover {
+    background-color: #09343c;
+}
+
+.cart-item .quantity span {
+    font-size: 1rem;
+    color: #333;
+}
+
+.total-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 1rem;
+    color: #0f5256;
+}
+
+.checkout {
+    padding: 0.7rem 1.5rem;
+    background-color: #0f5256;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
     text-align: center;
-    background: #0f5256;
-    color: white;
-    transition: 0.2s ease;
 }
 
-.navbar .links.show-menu {
-    left: 0;
+.checkout:hover {
+    background-color: #09343c;
 }
 
-.navbar .links a {
-    display: inline-flex;
-    margin: 20px 0;
-    font-size: 1.2rem;
-    color: white;
+.clear-cart {
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(135deg, #0f5256, #09343c);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-.navbar .links a:hover {
+.clear-cart:hover {
+    background: linear-gradient(135deg, #09343c, #0f5256);
+   
+}
+.place-order{
+    background-color: #09343c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 43%;
+    
+}
+.place-order:hover{
+    background-color: #fff;
     color: #09343c;
+    box-shadow: 2px 2px 2px rgba(90, 89, 89, 0.4);
+}
+.remove-btn{
+    color: white;
+    background-color: #0f5256;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+}
+.quantity-btn{
+    color: white;
+    background-color: #0f5256;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10 5px 10;
+}
+        
+
+        .product-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}  
+/* Container Styles */
+.container {
+    display: none;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.navbar .login-btn {
-    font-size: 0.9rem;
-    padding: 7px 10px;
-    margin-right: 10px;
-}
-}
-
-/* css for product cart */
-.main {
-  display: flex;
-  overflow: auto;
-  height: 90vh;
-  width: 100vw;
-  margin-top: 100px;
-  font-size: 22px;
-}
-*::-webkit-scrollbar {
-  display: none;
+/* Order Options Styles */
+.order-options {
+    display: none;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-#type_of_products {
-  display: inline-block;
-  height: 80vh;
-  overflow: auto;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  justify-items: center;
-  align-items: center;
-  width: 100%;
+.option-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0f5256;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#coloum_middle {
-  height: 90vh;
-  width: 75%;
-  display: inline-block;
-}
-.coloum h2{
-  color: white;
-}
-#selectType {
-  display: flex;
-  justify-content: flex-start;
-  align-content: center;
-  overflow: auto;
-  white-space: nowrap;
-  z-index: 1;
-  top: 0;
-  height: 75px;
-  width: 100%;
-  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.2);
-  /* background-color: bisque; */
+.option-btn:hover {
+    background-color: #fff;
+    color: #09343c;
+    box-shadow: 2px 2px 2px rgba(90, 89, 89, 0.4);
 }
 
-.itemTypes {
-  font-family: "Gabriela";
-  display: flex;
-  align-items: center;
-  padding: 5px 20px;
-  margin: 15px;
-  text-decoration: none;
-  color: black;
-  border: none;
-  font-size: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
-  background-color: #fff;
-  cursor: pointer;
-  animation: category 1s ease-in-out;
+/* Order Message Styles */
+.order-message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    color: #333;
+    font-size: 16px;
+    text-align: center;
 }
 
-@keyframes category {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/* .itemTypes {
-    opacity: 1;
-  } */
-#itemTypes1 {
-  -webkit-animation: category 1s 1 0.1s;
-  animation: category 1s 1 0.1s;
-}
-#itemTypes2 {
-  -webkit-animation: category 1s 1 0.12s;
-  animation: category 1s 1 0.12s;
-}
-#itemTypes3 {
-  -webkit-animation: category 1s 1 0.14s;
-  animation: category 1s 1 0.14s;
-}
-#itemTypes4 {
-  -webkit-animation: category 1s 1 0.16s;
-  animation: category 1s 1 0.16s;
-}
-#itemTypes5 {
-  -webkit-animation: category 1s 1 0.18s;
-  animation: category 1s 1 0.18s;
-}
-#itemTypes6 {
-  -webkit-animation: category 1s 1 0.2s;
-  animation: category 1s 1 0.2s;
+/* Delivery Form Styles */
+/* Delivery Form Styles */
+.delivery-form {
+    display: none; /* Hidden initially */
+    flex-direction: column;
+    gap: 5px;
 }
 
-.itemTypes:hover {
-  transition-duration: 0.4s;
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 12px 16px 0 rgba(0, 0, 0, 0.19);
-  /* transform: scale(1.05); */
+.delivery-form label {
+    font-size: 14px;
+    font-weight: bold;
 }
 
-.active {
-  /* transform: translateY(5px); */
-  transition-duration: 0.4s;
-  transform: scale(1.05);
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 12px 16px 0 rgba(0, 0, 0, 0.19);
-  background-color: #0f5256;
-  color: #fff;
+.delivery-form input,
+.delivery-form select {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-.items {
-  background-color: white;
-  height: 500px;
-  width: 250px;
-  border: 1px solid none;
-  border-radius: 20px;
-  margin: 30px 15px;
-  font-size: 16px;
-  display: block;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
-  transition-duration: 0.4s;
-  cursor: pointer;
-  animation: itembox 0.2s ease-in-out;
-}
-@keyframes itembox {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.delivery-form select {
+    cursor: pointer;
 }
 
-.items:hover {
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 14px 0 rgba(0, 0, 0, 0.19);
+.submit-btn {
+    padding: 10px;
+    background: linear-gradient(135deg, #0f5256, #09343c);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.items:active {
-  transition-duration: 0s;
-  opacity: 0.5;
+.submit-btn:hover {
+  background: linear-gradient(135deg, #09343c, #0f5256);
 }
-/* Styling for the button */
- .buy-now {
-  background-color: #0f5256;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.1s;
-}
-/* Hover effect for the button */
-.buy-now:hover {
-  background-color: #09343c;
-  transform: scale(1.05);
-}
-#order_Selected_Coloum {
-  display: flex;
-  flex-flow: row wrap;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  overflow: auto;
-  width: 25%;
-  height: 90vh;
-  background-color: #0f5256;
- 
+/* Table Styles */
+.cart-table-container {
+    width: 100%;
+    overflow: hidden;
 }
 
-
-#shopping_Bag_Message {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  /* border: 1px solid none; */
-  align-items: center;
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    table-layout: fixed; 
 }
-#shopping_Bag_Message img {
-  animation: ImgTag 3s ease-in-out infinite;
+
+.cart-table th, .cart-table td {
+    padding: 0.5rem;
+   
+    text-align: left;
+    word-wrap: break-word;
+} 
+
+.cart-table th {
+    font-size: 1.1rem;
+    border: 1px solid #ddd;
+    box-shadow: inset -5px -5px 10px white,inset 2px 2px 8px grey ;
+}
+
+.cart-table td {
+    font-size: 1rem;
+    box-shadow: -5px -5px 10px white,4px 4px 8px gray;
   
 }
-@keyframes ImgTag {
-  0%{
-    transform: rotateZ(0deg);
-    animation-timing-function: ease-in;
-    animation-delay: 1s;
-  }
-  20%{
-    transform: rotateZ(200deg);
-    animation-timing-function: ease-in;
-  }
-  30%{
-    transform: rotateZ(160deg);
-    animation-timing-function: ease-out;
-  }
-  35%{
-    transform: rotateZ(190deg);
-  }
-  40%{
-    transform: rotateZ(170deg);
-  }
-  45%{
-    transform: rotateZ(180deg);
-  }
-  70%{
-    transform: rotateZ(0deg);
-    animation-timing-function: linear;
-  }
-  100%{
-    transform: rotateZ(0deg);
-  }
 
- 
-}
-
-#selected_Orders_Review {
-  display: none;
-  border: 1px solid none;
-  border-radius: 5px;
-  width: 90%;
-  margin: 0 auto;
-  align-items: center;
-  font-size: 15px;
-}
-
-#selected_Orders_Review tr th,
-#total_Orders_Review_Row {
-  width: auto;
-  border: none;
-  align-items: center;
-  border-radius: 5px;
-  background-color:#fff;
-  padding: 5px 15px;
-  margin: 0;
-}
-
-#selected_Orders_Review #total_Orders_Review_Row,
-#selected_Orders_Review tbody tr td {
-  padding: 5px;
-  align-items: center;
-  width: auto;
-  /* border-top: 1px solid; */
-  border-bottom: 1px solid;
-}
-
-.order_Control_Button {
-  align-items: center;
-  background-color: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 0.25rem;
-  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-  box-sizing: border-box;
-  color: rgba(0, 0, 0, 0.85);
-  cursor: pointer;
-  display: inline-flex;
-  justify-content: center;
-  line-height: 1t5;
-  padding: 0 5px;
-  position: relative;
-  transition: all 250ms;
-}
-
-.order_Control_Button:hover,
-.order_Control_Button:focus {
-  border-color: rgba(0, 0, 0, 0.15);
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-  color: rgba(0, 0, 0, 0.65);
-}
-
-.order_Control_Button:hover {
-  transform: translateY(-1px);
-}
-
-.order_Control_Button:active {
-  background-color: #f0f0f1;
-  border-color: rgba(0, 0, 0, 0.15);
-  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
-  transform: translateY(0);
-}
-
-/* #place_Order { */
-  /* display: block; */
-  /* position: absolute; */
-  /* float: right; */
-  /* right: 40px; */
-/* } */
-
-
-#place_Order button,
-#view_bill_Btn,
-#confirm_Order_Btn,#id_Confirm_Please button {
-  /* display: none; */
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 15px auto;
-  padding: 5px 35px;
-  border: none;
-  border-radius: 5px;
-  background-color: white;
-  cursor: pointer;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
-}
-
-#place_Order button:hover,
-#view_bill_Btn:hover,
-#confirm_Order_Btn:hover,
-#id_Confirm_Please button:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
-}
-
-#place_Order button:focus {
-  background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
-}
-#view_bill_Btn:active,
-#confirm_Order_Btn:active,
-#id_Confirm_Please button:active {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
-}
-
-#paymentDetails {
-  height: 100px;
-  width: 100%;
-  border: 1px solid black;
-}
-.class_CLear_Orders{
-  display: none;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  padding: 250px;
-  background-color: rgba(0, 0, 0, 0.8);
-  transition-duration: 0.5s;
-  animation: ClearOrderAnimation 0.3s  ease-in-out 1;
-}
-@keyframes ClearOrderAnimation {
-  0%{
-    opacity: 0;
-    background-color: none;
-  }
-  100%{
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-}
-.class_Payment_Details {
-  display: none;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  padding: 100px;
-  background-color: rgba(0, 0, 0, 0.8);
-  /* transition-duration: 0.5s; */
-}
-
-#id_Confirm_Please{
-  display: block;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  border-radius: 10px;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 1);
-  width: 40%;
-  transition-duration: 0.5s;
-  animation: ConfirmOrderAnimation 0.3s 1 ;
-  animation-timing-function: ease-in-out;
-  animation-direction: alternate;
-}
-@keyframes ConfirmOrderAnimation {
-  0%{
-    transform: scale(0);
-  }
-  100%{
-    transform: scale(1);
-  }
-}
-
-#payment_Screen_Display {
-  display: block;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  border-radius: 10px;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 1);
-  width: 60%;
-  transition-duration: 0.5s;
-  animation: PaymentScreenAnimation 0.3s 1 ;
-  animation-timing-function: ease-in-out;
-  animation-direction: alternate;
-}
-@keyframes PaymentScreenAnimation {
-  0%{
-    transform: scale(0);
-  }
-  100%{
-    transform: scale(1);
-  }
-}
-#deliveryDetails {
-  align-items: center;
-  display: none;
-  margin: 30px;
-  border: 1px solid none;
-  transition-duration: 0.5s;
-}
-
-.delivery_Label {
-  display: inline-block;
-}
-.delivery_Input {
-  width: 80%;
-  display: inline;
-  margin: 20px 20px 20px 0;
-  padding: 5px;
-  border: none;
-  color: grey;
-  border-bottom: 1px solid black;
-}
-
-.delivery_Input:focus {
-  outline: none;
-  border: none;
-  border-bottom: 1px solid black;
-  background-color: white;
-  color: black;
-}
-
-#PaymentType {
-  outline: none;
-  border: 0.5px solid lightgray;
-  border-radius: 5px;
-  margin: 10px;
-  padding: 5px 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-#PaymentType:focus {
-  border: 1px solid gray;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 12px rgba(0, 0, 0, 0.15);
+.cart-table .remove-btn {
+    color: white;
+    background-color: #0f5256;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
 }
 
 
-#view_Bill_Box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid none;
-  width: 95%;
-  margin: 50px auto 50px auto;
+@media (max-width: 480px) {
+    .cart-table th, .cart-table td {
+        font-size: 0.8rem;
+        padding: 0.4rem;
+    }
+   .quantity-btn{
+    padding: 5px;
+   }
+    .cart-table th:nth-child(5),
+    .cart-table td:nth-child(5) {
+        display: none; 
+    }
 }
 
-#Order_Review_On_Bill {
-  text-align: center;
-  width: 50%;
-  margin: auto;
-  border: 1px solid none;
-  font-size: 13px;
-}
 
-/* css for footer */
+@media (max-width: 768px) {
+    .cart-table {
+        font-size: 0.8rem;
+    }
+
+    .cart-table th, .cart-table td {
+        padding: 0.6rem;
+    }
+}
+@media (max-width: 768px) {
+            main {
+                padding: 1rem;
+            }
+
+            .product-list {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .cart {
+                width: 100%;
+                padding: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .button-container {
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-top: 128px;
+            }
+
+            .button-container button {
+                width: 30%;
+                margin: auto;
+            }
+
+            .product-list {
+                grid-template-columns: 1fr;
+            }
+            .place-order{
+                margin-left: 36%;
+            }
+        }
+
+
+      /* css for footer */
 footer {
   position: relative;
   /* background: linear-gradient(135deg, #27ae60, #145214); */
@@ -662,16 +602,16 @@ footer {
   color: #fff;
   padding: 40px 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  /* margin-top: 100px; */
+  
 }
 
 footer::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 15px; 
+  height: 15px;
   background: #0f5256;
 }
 
@@ -697,8 +637,6 @@ footer::before {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 20px;
- 
- 
 }
 
 .footer-section h2 {
@@ -710,7 +648,7 @@ footer::before {
 }
 
 .footer-section h2::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 50px;
   height: 3px;
@@ -723,9 +661,11 @@ footer::before {
   font-size: 16px;
   line-height: 1.8;
   margin-bottom: 20px;
+  color: #fff;
 }
 
-.contact span, .socials a {
+.contact span,
+.socials a {
   display: block;
   margin: 10px 0;
   font-size: 16px;
@@ -794,419 +734,54 @@ footer::before {
   padding: 15px;
   background: #0f5256;
   font-size: 18px;
- 
- 
- 
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  footer{
-    margin-top: 100px;
-  }
+
+
   .footer-content {
-      flex-direction: column;
-      align-items: center;
-      padding: 0 10px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
   }
 
   .footer-section {
-      padding: 10px;
-      min-width: 100%;
+    padding: 10px;
+    min-width: 100%;
   }
 }
 
 @media (max-width: 480px) {
-  footer{
-    margin-top: 100px;
-  }
+  
   .logo-text {
-      font-size: 24px;
+    font-size: 24px;
   }
 
   .footer-section h2 {
-      font-size: 18px;
+    font-size: 18px;
   }
 
-  .footer-section p, .contact span, .socials a, .footer-section.links ul a {
-      font-size: 14px;
+  .footer-section p,
+  .contact span,
+  .socials a,
+  .footer-section.links ul a {
+    font-size: 14px;
   }
 
-  .contact-form .text-input, .contact-form .btn {
-      font-size: 14px;
-      padding: 10px;
+  .contact-form .text-input,
+  .contact-form .btn {
+    font-size: 14px;
+    padding: 10px;
   }
-
- 
 }
-  </style>
-
-  
-
-  <script>
-    /* Script for adding Products */
-    var displayItems = [
-     
-      {
-        id: "C01",
-        imageSource: "./assest/products/crops/corn.jpg",
-        imageAltername: "Corn",
-        type: "Crop",
-        name: "Corn",
-        price: 269,
-        quantity: 0,
-        totalPrice: 0,
-        description:"Our sweet corn is a summer favorite, known for its juiciness and flavor. Whether grilled, steamed, or roasted, Sweet corn is a delicious and healthy side dish.",
-
-      },
-      {
-        id: "C02",
-        imageSource: "./assest/products/crops/cucumber.jpg",
-        imageAltername: "Cucumber",
-        type: "Crop",
-        name: "Cucumber",
-        price: 159,
-        quantity: 0,
-        totalPrice: 0,
-        description:"Crisp and refreshing, our organic cucumbers are perfect for salads, pickling, or simply snacking. Grown with care, they're a delicious addition to your table.",
-      },
-      {
-        id: "C03",
-        imageSource: "./assest/products/crops/onions.jpg",
-        imageAltername: "Onions",
-        type: "Crop",
-        name: "Onions",
-        price: 99,
-        quantity: 0,
-        totalPrice: 0,
-        description:"Our onions come in a variety of colors and flavors, from mild to pungent. Perfect for adding depth to soups, stews, and sauces, they're a kitchen essential.",
-      },
-      {
-        id: "C04",
-        imageSource: "./assest/products/crops/potatoes.jpg",
-        imageAltername: "Potatoes",
-        type: "Crop",
-        name: "Potatoes",
-        price: 129,
-        quantity: 0,
-        totalPrice: 0,
-        description:"From creamy Yukon Golds to versatile russets, our organic potatoes are a staple in any kitchen. Perfect for mashing, roasting, or frying, they're a comfort food favorite.",
-      },
-      {
-        id: "C05",
-        imageSource: "./assest/products/crops/pumpkins.jpg",
-        imageAltername: "Pumpkins",
-        type: "Crop",
-        name: "Pumpkins",
-        price: 199,
-        quantity: 0,
-        totalPrice: 0,
-        description:"Our pumpkins are perfect for both decoration and cooking. Whether you're making pumpkin pie or carving jack-o'-lanterns, our pumpkins are a seasonal favorite.",
-      },
-      {
-        id: "C06",
-        imageSource: "./assest/products/crops/tomatoes.jpg",
-        imageAltername: "Tomatoes",
-        type: "Crop",
-        name: "Tomatoes",
-        price:  199,
-        quantity: 0,
-        totalPrice: 0,
-        description:"Our organic tomatoes are bursting with flavor and nutrients. From juicy heirloom varieties to classic beefsteak, our tomatoes are perfect for salads, sauces, and snacking.",
-      },
-      //FRUITS
-      {
-        id: "PZ01",
-        imageSource: "./assest/products/fruits/banana.jpg",
-        imageAltername: "Banana",
-        type: "fruits",
-        name: "Banana",
-        price: 10,
-        quantity: 0,
-        totalPrice: 0,
-        description:"Bananas are sweet fruits that are rich in potassium and vitamins. They are creamy and sweet fruits that are rich in potassium and essential vitamins.They are nutritious snack for all ages.",
-      },
-      {
-        id: "PZ02",
-        imageSource: "./assest/products/fruits/chikoos.jpg",
-        imageAltername: "Chikoo",
-        type: "fruits",
-        name: "Chikoo",
-        price: 50,
-        quantity: 0,
-        totalPrice: 0,
-        description:"Chikoo, or Sapodilla, is a sweet tropical fruit with a grainy texture and a flavor reminiscent of pear and brown sugar. It's rich in fiber, vitamins A and C, and minerals like potassium.",
-      },
-      {
-        id: "PZ03",
-        imageSource: "./assest/products/fruits/grapes.jpg",
-        imageAltername: "Grapes",
-        type: "fruits",
-        name: "Grapes",
-        price: 399,
-        quantity: 0,
-        totalPrice: 0,
-        description:"Grapes are small, round fruits that grow in clusters. They come in various colors, including green, red, and purple, and are often eaten fresh or used in salads and desserts.",
-      },
-      {
-        id: "PZ04",
-        imageSource: "./assest/products/fruits/mango.jpg",
-        imageAltername: "Mango",
-        type: "fruits",
-        name: "Mango",
-        price: 89,
-        quantity: 0,
-        totalPrice: 0,
-        description:"Mango is a tropical fruit with a sweet, juicy flesh and a distinctive flavor. It is high in vitamin C and A and is used in smoothies and salads.",
-      },
-      {
-        id: "PZ05",
-        imageSource: "./assest/products/fruits/muskmelon.jpg",
-        imageAltername: "Muskmelon",
-        type: "fruits",
-        name: "Muskmelon",
-        price: 80,
-        quantity: 0,
-        totalPrice: 0,
-        description:"Muskmelon, or cantaloupe, is a juicy, sweet fruit with a netted or smooth rind and orange flesh, rich in vitamin C, vitamin A, and antioxidants.",
-      },
-      {
-        id: "PZ06",
-        imageSource: "./assest/products/fruits/orange.jpg",
-        imageAltername: "Orange",
-        type: "fruits",
-        name: "Orange",
-        price: 10,
-        quantity: 0,
-        totalPrice: 0,
-        description:"Oranges are round citrus fruits with a bright orange skin and juicy flesh. They are high in vitamin C and are commonly juiced or eaten fresh.",
-      },
-      //Leafy-greens
-      {
-        id: "P01",
-        imageSource: "./assest/products/leafy-green/Beet Greens.jpg",
-        imageAltername: "Beet Greens",
-        type: "Leafy-greens",
-        name: "Beet Greens",
-        price: 229,
-        quantity: 0,
-        totalPrice: 0,
-        description:"Beet greens are the leafy tops of beetroot plants and are rich in nutrients like vitamins A and K.",
-      },
-      {
-        id: "P02",
-        imageSource: "./assest/products/leafy-green/cabbage.jpg",
-        imageAltername: "Cabbage",
-        type: "Leafy-greens",
-        name: "Cabbage",
-        price: 229,
-        quantity: 0,
-        totalPrice: 0,
-        description:"Cabbage is a nutritious leafy green vegetable that is rich in antioxidants and fiber.",
-      },
-      {
-        id: "P03",
-        imageSource:"./assest/products/leafy-green/coriander.jpg",
-        imageAltername: "Coriander",
-        type: "Leafy-greens",
-        name: "Coriander",
-        price: 229,
-        quantity: 0,
-        totalPrice: 0,
-        description:"Coriander, also known as cilantro, is a versatile herb that adds a fresh and citrusy flavor to dishes.",
-      },
-      {
-        id: "P04",
-        imageSource: "./assest/products/leafy-green/kale.jpg",
-        imageAltername: "Kale",
-        type: "Leafy-greens",
-        name: "Kale",
-        price: 229,
-        quantity: 0,
-        totalPrice: 0,
-        description:"Packed with antioxidants, our kale adds a nutritional boost to any meal. It's perfect for salads, smoothies, and stir-fries.",
-      },
-      {
-        id: "P05",
-        imageSource: "./assest/products/leafy-green/red spinach1.jpg",
-        imageAltername: "Red-Spinach",
-        type: "Leafy-greens",
-        name: "Red-Spinach",
-        price: 229,
-        quantity: 0,
-        totalPrice: 0,
-        description:"Red spinach is a nutrient-rich leafy green vegetable that adds color and flavor to salads and cooked dishes. It's a vibrant addition to any meal.",
-      },
-      {
-        id: "P06",
-        imageSource:"./assest/products/leafy-green/spinach.png",
-        imageAltername: "Spinach",
-        type: "Leafy-greens",
-        name: "Spinach",
-        price: 199,
-        quantity: 0,
-        totalPrice: 0,
-        description:"Rich in iron and vitamins, our spinach is perfect for salads and smoothies. Enjoy it fresh or cooked for a versatile and healthy option.",
-      },
-      
-     
-    ];
-    localStorage.setItem("displayItem", JSON.stringify(displayItems));
-    //With the help of "id" we are able to change the Quantity and price of the fillterred item//
-    function manageData(item, price) {
-      for (let i = 0; i < displayItems.length; i++) {
-        switch (item) {
-          case displayItems[i].id:
-            displayItems[i].quantity = displayItems[i].quantity + 1;
-            displayItems[i].totalPrice =
-              displayItems[i].price * displayItems[i].quantity;
-            localStorage.setItem("displayItem", JSON.stringify(displayItems));
-            break;
-        }
-      }
-      printSelectedOrder();
-    }
-
-    function printItems(displayItems) {
-      let foodItems = "";
-      for (let i = 0; i < displayItems.length; i++) {
-        foodItems =
-          foodItems +
-          `<box class="items" id="items` +
-          i +
-          `"onclick="manageData('` +
-          displayItems[i].id +
-          `',` +
-          displayItems[i].price +
-          `); 
-          event.stopPropagation()" ><img style="width: 250px; height: 240px; border-radius: 20px 20px 0 0" src="` +
-          displayItems[i].imageSource +
-          `" alt="` +
-          displayItems[i].imageAltername +
-          `" /><span style="color: black ; font-size: 2rem">` +
-          displayItems[i].name +
-          `</span><p>` +
-            displayItems[i].description +
-            `</span><p>` +
-              displayItems[i].price +
-          `/-</p><button class="buy-now" onclick="buynow()">Buy Now</button></box>`;
-      }
-      document.getElementById("type_of_products").innerHTML = foodItems;
-    }
-
-    // function buyNow(itemId) {
-  // Implement the buy now functionality here
-  // alert("Item " + itemId + " has been added to the cart!");
-// }
-    function printSelectedOrder() {
-      let selectedOrdersPriceList = "";
-      let itemsFromLocalStorage = JSON.parse(
-        localStorage.getItem("displayItem")
-      );
-      console.log("itemsFromLocalStorage", itemsFromLocalStorage);
-      for (let i = 0; i < itemsFromLocalStorage.length; i++) {
-        if (itemsFromLocalStorage[i].quantity > 0) {
-          document.getElementById("Your_Orders_Heading").style.display =
-            "block";
-          document.getElementById("selected_Orders_Review").style.display =
-            "block";
-          document.getElementById("shopping_Bag_Message").style.display =
-            "none";
-        }
-        console.log("entered for loop")
-        if (itemsFromLocalStorage[i].quantity > 0) {
-          selectedOrdersPriceList =
-            selectedOrdersPriceList +
-            `<tr><td style="color: white">` +
-            itemsFromLocalStorage[i].name +
-            `<br><p style="font-size: 10px; color:rgba(255,255,255,0.5);" > Order ID : (` +
-            itemsFromLocalStorage[i].id +
-            `)</p></td><td>` +
-            itemsFromLocalStorage[i].price +
-            `</td><td><button class="order_Control_Button" id="remove_Order" onclick="removeOrder(` +
-            i +
-            `)">-</button></td><td>` +
-            itemsFromLocalStorage[i].quantity +
-            `</td><td><button class="order_Control_Button" id="add_Order" onclick="addOrder(` +
-            i +
-            `)">+</button></td><td><span>` +
-            itemsFromLocalStorage[i].totalPrice +
-            `</span></td></tr>`;
-        }
-      }
-      // for displaying the total number of orders selected
-      grandTotalQuantity = 0;
-      for (let i = 0; i < displayItems.length; i++) {
-        grandTotalQuantity += displayItems[i].quantity;
-        localStorage.setItem("displayItem", JSON.stringify(displayItems));
-      }
-      // for displaying the total price of orders selected
-      grandTotalPrice = 0;
-      for (let i = 0; i < displayItems.length; i++) {
-        grandTotalPrice += displayItems[i].totalPrice;
-        localStorage.setItem("displayItem", JSON.stringify(displayItems));
-      }
-      document.getElementById("orderSelected").innerHTML = grandTotalQuantity;
-      document.getElementById("totalPrice").innerHTML = grandTotalPrice;
-      document.getElementById("order_And_Price").innerHTML =
-        selectedOrdersPriceList;
-    }
-
-    //Seperating Items By Type/Category
-    function filterDisplayItems(filterBy, id) {
-      var filteredDisplayItems = [];
-      for (let k = 0; k < displayItems.length; k++) {
-        if (displayItems[k].type == filterBy) {
-          filteredDisplayItems.push(displayItems[k]);
-        }
-      }
-      // console.log("ACTIVE ", document.getElementsByClassName("active"));
-      // debugger
-      for (
-        let i = 0;
-        i < document.getElementsByClassName("active").length;
-        i++
-      ) {
-        document
-          .getElementsByClassName("active")
-        [i].classList.remove("active");
-      }
-      document.getElementsByClassName("active");
-      document.getElementById(id).classList.add("active");
-      printItems(filteredDisplayItems);
-    }
-    // Adding order by clicking (+)
-    function addOrder(index) {
-      this.displayItems[index].quantity = displayItems[index].quantity + 1;
-      displayItems[index].totalPrice =
-        displayItems[index].price * displayItems[index].quantity;
-      localStorage.setItem("displayItem", JSON.stringify(displayItems));
-      printSelectedOrder();
-    }
-    //Removing orders by clicking (-)
-    function removeOrder(index) {
-      if (displayItems[index].quantity > 0) {
-        displayItems[index].quantity = displayItems[index].quantity - 1;
-        displayItems[index].totalPrice =
-          displayItems[index].totalPrice - displayItems[index].price;
-        localStorage.setItem("displayItem", JSON.stringify(displayItems));
-        printSelectedOrder();
-      }
-    }
-    function loadData() {
-      printItems(displayItems);
-      // if (localStorage.key("displayItem")) {
-      //   console.log("TRUE");
-      //   printSelectedOrder(JSON.parse(localStorage.getItem("displayItem")));
-      // } else {
-      // }
-    }
-  </script>
+       
+    </style>
 </head>
-
-<body onload="loadData()">
-  <header>
+<body>
+   
+   <!-- header section -->
+   <header>
     <nav class="navbar">
         <span class="hamburger-btn material-symbols-rounded">menu</span>
         <a href="#" class="logo">
@@ -1215,256 +790,354 @@ footer::before {
         </a>
         <ul class="links">
             <span class="close-btn material-symbols-rounded">close</span>
-            <li><a href="index.html">home</a></li>
+            <li><a href="index.html" >home</a></li>
             <li><a href="index.html#about-us">about</a></li>
-            <li><a href="product.html" class="activee">products</a></li>
-            <li><a href="delivery.html">delivery</a></li>
+            <li><a href="product.html" class="active">products</a></li>
+            <li><a href="delivery.html" >delivery</a></li>
             <li><a href="blogs.html"  >blog</a></li>
             <li><a href="contact.html">contact</a></li>
         </ul>
         <a href="login.html"><button class="login-btn">LOG IN</button></a>
     </nav>
 </header>
-
-
-    <div class="main">
-      <div id="coloum_middle">
-        <div id="selectType">
-          <p style="
-                line-height: 70px;
-                padding: 0 10px 0 10px;
-                position: sticky;
-                left: 0px;
-                background-color: white;
-                z-index: -1;
-                box-shadow: 10px 0 10px white;
-              ">
-            Products :
-          </p>
-          <button class="itemTypes" id="itemTypes1" onclick="printItems(displayItems)">
-            All
-          </button>
-          <button class="itemTypes" id="itemTypes2"
-            onclick="filterDisplayItems('Crop', 'itemTypes2'); event.stopPropagation()">
-            Crops
-          </button>
-          <button class="itemTypes" id="itemTypes3" onclick="filterDisplayItems('fruits', 'itemTypes3' )">
-            Fruits
-          </button>
-          <button class="itemTypes" id="itemTypes4" onclick="filterDisplayItems('Leafy-greens', 'itemTypes4' )">
-            Leafy Greens
-          </button>
-         
+    <div class="button-container">
+        <button id="leafy-button" onclick="showProducts('leafy')">Leafy Greens</button>
+        <button id="fruits-button" onclick="showProducts('fruits')">Fruits</button>
+        <button id="vegetables-button" onclick="showProducts('vegetables')">Vegetables</button>
+    </div>
+    <main>
+        <div class="product-list" id="product-list">
+            <!-- Products will be dynamically inserted here -->
         </div>
-        <div class="coloum" id="type_of_products"></div>
-      </div>
-      <div class="coloum" id="order_Selected_Coloum">
-        <h2 id="Your_Orders_Heading" style="display: none; margin: 50px auto 0 auto">
-          Your Orders
-        </h2>
-        <div id="shopping_Bag_Message">
-          <img src="assest/ShoppingBag (2).png" alt="Shopping Bag"
-            style="display: block; width: 80px; height: 90px" />
-          <br />
-          <p style="display: block; color: white">
-            Your Bag is empty. <br />
-            Please Select.
-          </p>
-        </div>
-
-        <table id="selected_Orders_Review">
-          <thead>
-            <tr>
-              <th>Your Orders</th>
-              <th>Price</th>
-              <!-- <th></th> -->
-              <th colspan="3">Quantity</th>
-              <!-- <th></th> -->
-              <th>Total Price</th>
-            </tr>
-          </thead>
-          <tbody style="color:white" id="order_And_Price"></tbody>
-          <tfoot>
-            <tr id="total_Orders_Review_Row">
-              <th colspan="2">Total</th>
-              <!-- <th></th> -->
-              <th colspan="3">
-                <span id="orderSelected">0</span>
-              </th>
-              <th>
-                <span id="totalPrice">0</span>
-              </th>
-            </tr>
-            <tr id="place_Order">
-              <td colspan="3">
-                <button onclick="ClearOrders()">
-                  Clear
-                  <img src="assest/Dustbin.png" style="height: 18px; width: 18px; text-align: center"
-                    alt="DustBin" />
-                </button>
-              </td>
-              <td colspan="3">
-                <button id="place_Order_Btn">Place Order</button>
-              </td>
-            </tr>
-          </tfoot>
-        </table>
-
-        <div id="id_Clear_Order" class="class_CLear_Orders">
-          <div id="id_Confirm_Please">
-            <p>Are you sure to cancel all your orders..</p>
-            <button onclick="CancelOrders('Yes')">Yes</button>
-            <button onclick="CancelOrders('NO')">NO</button>
-          </div>
-        </div>
-
-        <div id="id_Payment_Details" class="class_Payment_Details">
-          <div id="payment_Screen_Display">
-            <!-- <form>
-              <input class="paymentInput" name="name" type="text" required>
-              <input class="paymentInput" name="address" type="text" required>
-              <button type="submit">Submit</button>
-            </form> -->
-
-            <form style="padding-top: 50px" action="">
-              <input style="cursor: pointer" type="radio" id="Take-Away" name="Order_Type" value="Take-Away"
-                onclick="TakeAwayDetails()" />
-              <label style="cursor: pointer; margin-right: 75px" for="Take-Away">Take-Away/Dine-In</label>
-              <!-- <div style="display: inline-block;width: 100px;border: 1px solid none;"></div> -->
-              <input style="cursor: pointer; margin-left: 75px" type="radio" id="Delivery" name="Order_Type"
-                value="Delivery" onclick="DeliveryDetails()" />
-              <label style="cursor: pointer" for="Delivery">Delivery</label>
-
-              <br />
-
-              <!-- Div for the Delivery Details -->
-              <div id="deliveryDetails">
-                <span>Delivery Details</span>
-                <br />
-                <label class="delivery_Label" for="user_Name">Name:</label>
-                <input class="delivery_Input" id="user_Name" type="text" name="userName" placeholder="your name.."
-                  autocomplete="off" required />
-
-                <label class="delivery_Label" for="user_Address">Address:</label>
-                <input class="delivery_Input" id="user_Address" type="text" name="userAddressLine"
-                  placeholder="your address.." autocomplete="off" required />
-
-                <label class="delivery_Label" for="user_Contact">Contact No:</label>
-                <input class="delivery_Input" id="user_Contact" type="number" name="UsersContactNumber"
-                  placeholder="your contact number" autocomplete="off" required />
-
-                <label for="PaymentType">Select Payment Mode : </label>
-                <select name="UserPaymentType" id="PaymentType">
-                  <option value="NotSelected" selected>Not Selected</option>
-                  <option value="CreditCard">Credit Card</option>
-                  <option value="DebitCard">Debit Card</option>
-                  <option value="UPI">UPI</option>
-                  <option value="NetBanking">Net Banking</option>
-                  <option value="COD">Cash On Delivery</option>
-                </select>
-                <input type="button" id="confirm_Order_Btn" onclick="ConfirmOrder(),stopPropagation()" value="Submit" />
-              </div>
-            </form>
-
-            <!-- Div for the Take Aways/Dine-Ins -->
-            <div id="TakeAways_DineIn" style="display: none">
-              <p style="margin-top: 50px">Your Order Getting Ready.</p>
-              <p>Please Wait..</p>
-            </div>
-            <br />
-
-            <p id="finalMessage"></p>
-
-            <br />
-
-            <button id="view_bill_Btn" style="display: none" onclick="view_Bill_Display()">
-              Print Bill
-            </button>
-
-            <div id="view_Bill_Box" style="display: none">
-              <h3 style="text-decoration: solid">Suryakata Organic Farming</h3>
-              <p>Location : Nagpura Murri, Gondia</p>
-              <p id="currentDateAndTime" style="font-size: 10px"></p>
-              <br />
-              <hr style="width: 50%; margin: auto" />
-              <br />
-              <table id="Order_Review_On_Bill">
-                <thead style="border-bottom: 1px solid">
-                  <tr>
-                    <th colspan="2" style="text-align: left">Item Name</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                  </tr>
-                  <tr></tr>
+        <div class="cart">
+            <h2>Shopping Cart</h2>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Remove</th>
+                    </tr>
                 </thead>
-                <tbody id="Print_Bill_Table"></tbody>
-                <tfoot>
-                  <tr>
-                    <th colspan="2" style="text-align: left">Total</th>
-                    <th></th>
-                    <th><span id="total_Price_On_Bill"> </span></th>
-                  </tr>
-                </tfoot>
-              </table>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    </div>
-
-         <!-- footer section -->
-      <footer>
-        <div class="footer-content">
-            <div class="footer-section about">
-                <h2 class="logo-text">Suryakanta Organics</h2>
-                <p>Sustainable and fresh hydroponically grown produce delivered straight to your table.</p>
-                <div class="contact">
-                    <span><i class="fas fa-phone"></i> &nbsp; +91-1234567890</span>
-                    <span><i class="fas fa-envelope"></i> &nbsp; info@suryakantaorganics.com</span>
-                    <span><i class="fas fa-map-marker-alt"></i> &nbsp; Suryakanta Ambule House, Murri, Gondia, 441601</span>
+                <tbody class="cart-items"></tbody>
+            </table>
+            <div class="total-price">Total: $0</div>
+            <button class="clear-cart">Clear Cart</button>
+            <button id="placeOrderBtn" class="place-order">Place Order</button>
+        
+            <div class="container">
+                <div id="orderOptions" class="order-options">
+                    <button id="takeAwayBtn" class="option-btn">Take-Away/Dine-In</button>
+                    <button id="deliveryBtn" class="option-btn">Delivery</button>
                 </div>
-                <div class="socials">
-                    <a href="#"><i class="fab fa-facebook"></i>&nbsp; Facebook</a>
-                    <a href="#"><i class="fab fa-twitter"></i>&nbsp; Twitter</a>
-                    <a href="#"><i class="fab fa-instagram"></i>&nbsp; Instagram</a>
-                    <a href="#"><i class="fab fa-linkedin"></i>&nbsp; Linkedin</a>
-                </div>
-            </div>
-            <div class="footer-section links">
-                <h2>Quick Links</h2>
-                <ul>
-                  <a href="index.html#about-us"><li>About Us</li></a>
-                  <a href="product.html"><li>Products</li></a>
-                  <a href="blogs.html"><li>Blog/News</li></a>
-                  <a href="delivery.html"><li>Delivery</li></a>
-                  <a href="contact.html"><li>Contact Us</li></a>
-                  <a href="delivery.html#faq"><li>FAQs</li></a>
-                </ul>
-            </div>
-            <div class="footer-section contact-form">
-                <h2>Contact Us</h2>
-                <form action="index.html" method="post">
-                    <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
-                    <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
-                    <button type="submit" class="btn btn-big contact-btn">
-                        <i class="fas fa-envelope"></i>
-                        Send
-                    </button>
+                <div id="orderMessage" class="order-message"></div>
+                <form id="deliveryForm" class="delivery-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" name="phone" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="paymentMode">Payment Mode:</label>
+                    <select id="paymentMode" name="paymentMode" required>
+                        <option value="">Select Payment Mode</option>
+                        <option value="creditCard">Credit Card</option>
+                        <option value="debitCard">Debit Card</option>
+                        <option value="netBanking">Net Banking</option>
+                        <option value="upi">UPI</option>
+                        <option value="cod">Cash on Delivery</option>
+                    </select>
+                    <button type="submit" class="submit-btn">Submit</button>
                 </form>
             </div>
+        
+    </div>
+    </main>
+     <!-- footer section -->
+     <footer>
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h2 class="logo-text">Suryakanta Organics</h2>
+            <p>Sustainable and fresh hydroponically grown produce delivered straight to your table.</p>
+            <div class="contact">
+              <span><i class="fas fa-phone"></i> &nbsp; +91-1234567890</span>
+              <span><i class="fas fa-envelope"></i> &nbsp; info@suryakantaorganics.com</span>
+              <span><i class="fas fa-map-marker-alt"></i> &nbsp; Suryakanta Ambule House, Murri, Gondia, 441601</span>
+            </div>
+            <div class="socials">
+              <a href="#"><i class="fab fa-facebook"></i>&nbsp; Facebook</a>
+              <a href="#"><i class="fab fa-twitter"></i>&nbsp; Twitter</a>
+              <a href="#"><i class="fab fa-instagram"></i>&nbsp; Instagram</a>
+              <a href="#"><i class="fab fa-linkedin"></i>&nbsp; Linkedin</a>
+            </div>
+          </div>
+          <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <ul>
+              <a href="index.html#about-us">
+                <li>About Us</li>
+              </a>
+              <a href="product.html">
+                <li>Products</li>
+              </a>
+              <a href="blogs.html">
+                <li>Blog/News</li>
+              </a>
+              <a href="delivery.html">
+                <li>Delivery</li>
+              </a>
+              <a href="contact.html">
+                <li>Contact Us</li>
+              </a>
+              <a href="delivery.html#faq">
+                <li>FAQs</li>
+              </a>
+            </ul>
+          </div>
+          <div class="footer-section contact-form">
+            <h2>Contact Us</h2>
+            <form action="index.html" method="post">
+              <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
+              <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
+              <button type="submit" class="btn btn-big contact-btn">
+                <i class="fas fa-envelope"></i>
+                Send
+              </button>
+            </form>
+          </div>
         </div>
         <div class="footer-bottom">
-            &copy; suryakantaorganics.com | Designed by Sakshi
+          &copy; suryakantaorganics.com | Designed by Sakshi
         </div>
-    </footer>
+      </footer>
   
+    <script>
+        const products = {
+            leafy: [
+                { id: '1', name: 'Spinach',
+                 description: 'Rich in iron and vitamins, our spinach is perfect for salads and smoothies.', 
+                 price: 199, 
+                 image: 'assest/products/leafy-green/spinach.png'
+                },
+                { id: '2', name: 'Kale',
+                 description: 'Packed with antioxidants, our kale adds a nutritional boost to any meal.', 
+                 price: 229, 
+                 image: 'assest/products/leafy-green/kale.jpg'
+                },
+                { id: '3', name: 'Cabbage',
+                 description: 'Cabbage is a nutritious leafy green vegetable that is rich in antioxidants and fiber.', 
+                 price: 229, 
+                 image: 'assest/products/leafy-green/cabbage.jpg'
+                },
+                { id: '4', name: 'Coriander',
+                 description: 'Coriander, also known as cilantro, is a versatile herb that adds a fresh and citrusy flavor to dishes.', 
+                 price: 229 , 
+                 image: 'assest/products/leafy-green/coriander.jpg'
+                },
+                { id: '5', name: 'Red-Spinach',
+                 description: 'Red spinach is a nutrient-rich leafy green vegetable that adds color and flavor to salads and cooked dishes.', 
+                 price: 229 , 
+                 image: 'assest/products/leafy-green/red spinach1.jpg'
+                },
+                { id: '6', name: 'Beet Green',
+                 description: 'Beet greens are the leafy tops of beetroot plants and are rich in nutrients like vitamins A and K.', 
+                 price: 229 , 
+                 image: 'assest/products/leafy-green/Beet Greens.jpg'
+                },
+                
+            ],
+            fruits: [
+                { id: '7', name: 'Bananas', 
+                description: 'Bananas are creamy and sweet fruits that are rich in potassium and vitamins. They are a convenient and nutritious snack for all ages.', 
+                price: 10, 
+                image: 'assest/products/fruits/banana.jpg'  
+                },
+                { id: '8', name: 'Mango', 
+                description: 'Mango is a tropical fruit with a sweet, juicy flesh and a distinctive flavor. It is high in vitamin C and A and is used in smoothies and salads.', 
+                price: 89, 
+                image: 'assest/products/fruits/mango.jpg'  
+                },
+                { id: '9', name: 'Orange', 
+                description: 'Oranges are round citrus fruits with a bright orange skin and juicy flesh. They are high in vitamin C and are commonly juiced or eaten fresh.', 
+                price: 10, 
+                image: 'assest/products/fruits/orange.jpg'  
+                },
+                { id: '10', name: 'Chikoo', 
+                description: 'Chikoo, or Sapodilla, is a sweet tropical fruit with a grainy texture and a flavor reminiscent of pear and brown sugar. It is rich in fiber, vitamins A and C, and minerals like potassium.', 
+                price: 50, 
+                image: 'assest/products/fruits/chikoos.jpg'  
+                },
+                { id: '11', name: 'Muskmelon', 
+                description: 'Muskmelon, or cantaloupe, is a juicy, sweet fruit with a netted or smooth rind and orange flesh, rich in vitamin C, vitamin A, and antioxidants.', 
+                price: 80, 
+                image: 'assest/products/fruits/muskmelon.jpg'  
+                },
+                { id: '12', name: 'Grapes', 
+                description: 'Grapes are small, round fruits that grow in clusters. They come in various colors, including green, red, and purple, and are often eaten fresh or used in salads and desserts.', 
+                price: 399, 
+                image: 'assest/products/fruits/grapes.jpg'  
+                }
+                
+                
+            ],
+            vegetables: [
+                { id: '13', name: 'Tomatoes', 
+                description: 'Our organic tomatoes are bursting with flavor and nutrients. From juicy heirloom varieties to classic beefsteak, our tomatoes are perfect for salads, sauces, and snacking.', 
+                price: 199, 
+                image: 'assest/products/crops/tomatoes.jpg'   
+                },
+                { id: '14', name: 'Cucumber', 
+                description: 'Crisp and refreshing, our organic cucumbers are perfect for salads, pickling, or simply snacking. Grown with care, they are a delicious addition to your table.', 
+                price: 159, 
+                image: 'assest/products/crops/cucumber.jpg'   
+                },
+                { id: '15', name: 'Potatoes', 
+                description: 'From creamy Yukon Golds to versatile russets, our organic potatoes are a staple in any kitchen. Perfect for mashing, roasting, or frying, they are a comfort food favorite.', 
+                price: 129, 
+                image: 'assest/products/crops/potatoes.jpg'   
+                },
+                { id: '16', name: 'Onions', 
+                description: 'Our onions come in a variety of colors and flavors, from mild to pungent. Perfect for adding depth to soups, stews, and sauces, they are a kitchen essential.', 
+                price: 99, 
+                image: 'assest/products/crops/onions.jpg'   
+                },
+                { id: '17', name: 'Pumpkins', 
+                description: 'Our pumpkins are perfect for both decoration and cooking. Whether you are making pumpkin pie or carving jack-o-lanterns, our pumpkins are a seasonal favorite.', 
+                price: 199, 
+                image: 'assest/products/crops/pumpkins.jpg'   
+                },
+                { id: '18', name: 'Corn', 
+                description: 'Our sweet corn is a summer favorite, known for its juiciness and flavor. Whether grilled, steamed, or roasted, Sweet corn is a delicious and healthy side dish.', 
+                price: 269, 
+                image: 'assest/products/crops/corn.jpg'   
+                }
+               
+
+                 
+            ]
+        };
 
 
-        <script>
- // js for navbar
- const navbarMenu = document.querySelector(".navbar .links");
+showProducts('leafy');
+
+function showProducts(type) {
+    const productList = document.getElementById('product-list');
+    productList.innerHTML = '';
+    products[type].forEach(product => {
+        const productBox = document.createElement('div');
+        productBox.className = 'product-box';
+        productBox.dataset.id = product.id;
+        productBox.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <h2>${product.name}</h2>
+            <p>${product.description}</p>
+            <p>Price: $${product.price}</p>
+            <button onclick="addToCart('${product.id}', '${product.name}', ${product.price})">Add to Cart</button>
+        `;
+        productList.appendChild(productBox);
+    });
+}
+
+let cart = [];
+
+function addToCart(id, name, price) {
+    const itemIndex = cart.findIndex(item => item.id === id);
+    if (itemIndex !== -1) {
+        cart[itemIndex].quantity += 1;
+    } else {
+        cart.push({ id, name, price, quantity: 1 });
+    }
+    updateCart();
+}
+
+function updateCart() {
+    const cartItems = document.querySelector('.cart-items');
+    const totalPriceElem = document.querySelector('.total-price');
+    cartItems.innerHTML = '';
+    let totalPrice = 0;
+
+    cart.forEach(item => {
+        const cartItem = document.createElement('tr');
+        cartItem.innerHTML = `
+            <td>${item.name}</td>
+            <td>$${item.price.toFixed(2)}</td>
+            <td>
+                <button class="quantity-btn" onclick="changeQuantity('${item.id}', -1)">-</button>
+                ${item.quantity}
+                <button class="quantity-btn" onclick="changeQuantity('${item.id}', 1)">+</button>
+            </td>
+            <td>$${(item.price * item.quantity).toFixed(2)}</td>
+            <td><button class="remove-btn" onclick="removeFromCart('${item.id}')">Remove</button></td>
+        `;
+        cartItems.appendChild(cartItem);
+        totalPrice += item.price * item.quantity;
+    });
+
+    totalPriceElem.textContent = `Total: $${totalPrice.toFixed(2)}`;
+}
+
+
+function changeQuantity(id, amount) {
+    const itemIndex = cart.findIndex(item => item.id === id);
+    if (itemIndex !== -1) {
+        cart[itemIndex].quantity += amount;
+        if (cart[itemIndex].quantity <= 0) {
+            cart.splice(itemIndex, 1);
+        }
+        updateCart();
+    }
+}
+
+function removeFromCart(id) {
+    cart = cart.filter(item => item.id !== id);
+    updateCart();
+}
+
+document.querySelector('.clear-cart').addEventListener('click', () => {
+    cart = [];
+    updateCart();
+});
+
+
+// js for place order
+document.addEventListener('DOMContentLoaded', () => {
+    const placeOrderBtn = document.getElementById('placeOrderBtn');
+    const orderOptions = document.getElementById('orderOptions');
+    const takeAwayBtn = document.getElementById('takeAwayBtn');
+    const deliveryBtn = document.getElementById('deliveryBtn');
+    const orderMessage = document.getElementById('orderMessage');
+    const deliveryForm = document.getElementById('deliveryForm');
+    const cartItems = document.querySelector('.cart-items'); 
+
+    placeOrderBtn.addEventListener('click', () => {
+        if (cartItems.children.length === 0) {
+            alert('Your cart is empty. Please add products before placing an order.');
+        } else {
+            orderOptions.style.display = 'flex';
+        }
+    });
+    document.getElementById('placeOrderBtn').addEventListener('click', () => {
+            document.querySelector('.container').style.display = 'block';
+        });
+    takeAwayBtn.addEventListener('click', () => {
+        orderMessage.innerText = 'Your Order Getting Ready. Please Wait..';
+        orderMessage.style.display = 'block';
+        deliveryForm.style.display = 'none';
+    });
+
+    deliveryBtn.addEventListener('click', () => {
+        deliveryForm.style.display = 'flex';
+        orderMessage.style.display = 'none';
+    });
+});
+
+
+//js for navbar
+    const navbarMenu = document.querySelector(".navbar .links");
 const hamburgerBtn = document.querySelector(".hamburger-btn");
 const hideMenuBtn = navbarMenu.querySelector(".close-btn");
 const showPopupBtn = document.querySelector(".login-btn");
@@ -1477,119 +1150,16 @@ hamburgerBtn.addEventListener("click", () => {
 // Hide mobile menu
 hideMenuBtn.addEventListener("click", () =>  hamburgerBtn.click());
 
-// js for product
-          function TakeAwayDetails() {
-            document.getElementById("deliveryDetails").style.display = "none";
-            document.getElementById("TakeAways_DineIn").style.display =
-              "block";
-            document.getElementById("finalMessage").style.display = "none";
-          }
-          function DeliveryDetails() {
-            document.getElementById("deliveryDetails").style.display =
-              "block";
-            document.getElementById("TakeAways_DineIn").style.display =
-              "none";
-          }
 
-          function ConfirmOrder() {
-            let UserName = document.getElementById("user_Name").value;
-            let Address1 = document.getElementById("user_Address").value;
-            let UserContact = document.getElementById("user_Contact").value;
-            document.getElementById("finalMessage").innerHTML =
-              "Your order is on the way.";
-            view_bill_Btn.style.display = "block";
-          }
+  // js for footer section
+  document.addEventListener("DOMContentLoaded", function () {
+            const btn = document.querySelector('.contact-btn');
 
-          function view_Bill_Display() {
-            view_Bill_Box.style.display = "block";
-            const todays_Date = new Date();
-            document.getElementById("currentDateAndTime").innerHTML =
-              todays_Date;
-
-            let printBill = "";
-            for (let i = 0; i < displayItems.length; i++) {
-              if (displayItems[i].quantity > 0) {
-                printBill =
-                  printBill +
-                  `<tr><td><i class="fa fa-circle" aria-hidden="true" style="font-size: 8px; text-align: center"></i></td><td style="text-align: left;">` +
-                  displayItems[i].name +
-                  `</td><td>` +
-                  displayItems[i].quantity +
-                  `</td><td>` +
-                  displayItems[i].totalPrice +
-                  `</td></tr>`;
-                document.getElementById("Print_Bill_Table").innerHTML =
-                  printBill;
-                document.getElementById("total_Price_On_Bill").innerHTML =
-                  grandTotalPrice;
-              }
-            }
-          }
-        </script>
-
-        <!-- Script for Payment Screen  -->
-        <script>
-          var varOfPaymentDetails =
-            document.getElementById("id_Payment_Details");
-          var varOfpaymentScreenDisplay = document.getElementById(
-            "payment_Screen_Display"
-          );
-          var btnOfPaymentScreen = document.getElementById("place_Order_Btn");
-          btnOfPaymentScreen.onclick = function () {
-            varOfPaymentDetails.style.display = "block";
-          };
-
-          varOfPaymentDetails.onclick = function (event) {
-            console.log("in the window . event");
-            if (event.target == varOfPaymentDetails) {
-              console.log("In the loop");
-              varOfPaymentDetails.style.display = "none";
-            }
-          };
-        </script>
-        <script>
-          var varOfClearOrders = document.getElementById("id_Clear_Order");
-          function ClearOrders() {
-            varOfClearOrders.style.display = "block";
-          }
-          window.onclick = function (event) {
-            if (event.target == varOfClearOrders) {
-              varOfClearOrders.style.display = "none";
-            }
-          };
-          // confirm("Are you sure to remove all orders from your cart..");
-          function CancelOrders(Answer) {
-            if (Answer == "Yes") {
-              for (let i = 0; i < displayItems.length; i++) {
-                displayItems[i].quantity = 0;
-                displayItems[i].totalPrice = 0;
-              }
-              varOfClearOrders.style.display = "none";
-              document.getElementById("Your_Orders_Heading").style.display =
-                "none";
-              document.getElementById(
-                "selected_Orders_Review"
-              ).style.display = "none";
-              document.getElementById("shopping_Bag_Message").style.display =
-                "flex";
-            }
-            if (Answer == "NO") {
-              varOfClearOrders.style.display = "none";
-            }
-          }
-
-           // js for footer section
-document.addEventListener("DOMContentLoaded", function() {
-   const btn = document.querySelector('.contact-btn');
-
-   btn.addEventListener('click', function(e) {
-       e.preventDefault();
-       alert('Your message has been sent!');
-   });
-});
-
-        </script>
-      
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                alert('Your message has been sent!');
+            });
+        });
+    </script>
 </body>
-
 </html>
