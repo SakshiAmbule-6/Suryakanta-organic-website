@@ -219,13 +219,21 @@
             margin: 10px; 
             width: 280px; 
             text-align: left; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+              0 6px 20px rgba(0, 0, 0, 0.1),
+              0 8px 40px rgba(0, 0, 0, 0.2);
+           transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
-
+        .product-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+        
        .product-box img {
            width: 100%; 
            height: auto; 
         }
+        
 
        .product-box h2 {
            font-size: 24px;
@@ -451,9 +459,9 @@
 }
 
 /* Delivery Form Styles */
-/* Delivery Form Styles */
+
 .delivery-form {
-    display: none; /* Hidden initially */
+    display: none; 
     flex-direction: column;
     gap: 5px;
 }
@@ -594,7 +602,6 @@
       /* css for footer */
 footer {
   position: relative;
-  /* background: linear-gradient(135deg, #27ae60, #145214); */
   background-image: url(assest/background2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -1035,7 +1042,7 @@ function showProducts(type) {
             <img src="${product.image}" alt="${product.name}">
             <h2>${product.name}</h2>
             <p>${product.description}</p>
-            <p>Price: $${product.price}</p>
+            <p>Price: ${product.price}/-</p>
             <button onclick="addToCart('${product.id}', '${product.name}', ${product.price})">Add to Cart</button>
         `;
         productList.appendChild(productBox);
@@ -1064,20 +1071,20 @@ function updateCart() {
         const cartItem = document.createElement('tr');
         cartItem.innerHTML = `
             <td>${item.name}</td>
-            <td>$${item.price.toFixed(2)}</td>
+            <td>${item.price.toFixed(2)}/-</td>
             <td>
                 <button class="quantity-btn" onclick="changeQuantity('${item.id}', -1)">-</button>
                 ${item.quantity}
                 <button class="quantity-btn" onclick="changeQuantity('${item.id}', 1)">+</button>
             </td>
-            <td>$${(item.price * item.quantity).toFixed(2)}</td>
+            <td>${(item.price * item.quantity).toFixed(2)}/-</td>
             <td><button class="remove-btn" onclick="removeFromCart('${item.id}')">Remove</button></td>
         `;
         cartItems.appendChild(cartItem);
         totalPrice += item.price * item.quantity;
     });
 
-    totalPriceElem.textContent = `Total: $${totalPrice.toFixed(2)}`;
+    totalPriceElem.textContent = `Total: ${totalPrice.toFixed(2)}/-`;
 }
 
 
